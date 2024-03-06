@@ -1,4 +1,4 @@
-import  {StyleSheet} from 'react native';
+import  {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create ({
  container : {
@@ -14,5 +14,13 @@ const styles = StyleSheet.create ({
     textAlign: 'center',
     color : '#1565C0',
 
- },   
+ },
+ 
+ image : {
+   width: '90%',
+   height: '15%',
+   margin: 10,
+ }
 });
+
+export default styles;
