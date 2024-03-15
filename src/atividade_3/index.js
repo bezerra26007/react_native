@@ -29,6 +29,13 @@ export default function Atividade_3() {
 
     }
 
+    function zerar() {
+        const inc = numero * 0;
+        setNumero(inc);
+        //console.log(numero);
+
+    }
+
     return (
         <View style={styles.container}>
             <Text style={styles.titulo}> Exemplo_3</Text>
@@ -37,21 +44,42 @@ export default function Atividade_3() {
 
                 <Text style={styles.txtBotao} >Diga "Ola Mundo"</Text>
             </TouchableOpacity>
-            <text style={styles.titulo}> Valor: {numero}</text>
 
             <View style={styles.botao1}>
-                <TouchableOpacity style={styles.botao} onPress={() => incremento()}>
-                    <Text style={styles.txtBotao} >+ </Text>
+
+
+
+
+
+                <View style={styles.container2}>
+                    <View style={styles.container_botao}>
+
+                  
+                    <TouchableOpacity style={styles.botao2} onPress={() => incremento()}>
+                        <Text style={styles.txtBotao} > +</Text>
+                    </TouchableOpacity>
+
+                    <text style={styles.titulo}> Valor: {numero}</text>
+
+
+                    <TouchableOpacity style={styles.botao2} onPress={() => decremento()}>
+                        <Text style={styles.txtBotao} > -</Text>
+                    </TouchableOpacity>
+                    </View>
+                <TouchableOpacity style={styles.botao} onPress={() => zerar()}>
+                    <Text style={styles.txtBotao} > Zerar</Text>
                 </TouchableOpacity>
-                <Text>
-                    {
-                        numero 
-                    }
-                </Text>
-                <TouchableOpacity style={styles.botao} onPress={() => decremento()}>
-                    <Text style={styles.txtBotao} > -</Text>
-                </TouchableOpacity>
+
+
+                  
+
+                </View>
+                
+
             </View>
+
         </View>
+
+
     );
 }
